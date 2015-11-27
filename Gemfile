@@ -12,6 +12,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'mysql2', '~> 0.3.20'
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'awesome_print', '~> 1.6', '>= 1.6.1'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'font-awesome-rails', '~> 4.5'
 
 group :development, :test do 
   gem 'byebug'

@@ -1,0 +1,53 @@
+%html
+  %head
+    %title HolisticLife | Un mundo generoso
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    / = stylesheet_link_tag 'animate'
+    / = stylesheet_link_tag 'prettyPhoto.scss'
+    / = stylesheet_link_tag 'main.scss'
+
+  %body.homepage
+    %header#header
+      %nav.navbar.navbar-inverse{:role => "banner"}
+        .container
+          .col-sm-12.col-xs-8
+            .social
+              %ul.social-share
+                %li
+                  %a{:href => "https://www.facebook.com/HolisticLifeUnMundoGeneroso", :target => "_blank"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "https://twitter.com/_holisticlife", :target => "_blank"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "https://www.youtube.com/user/Holisticlifemx", :target => "_blank"}
+                    %i.fa.fa-youtube
+                %li
+                  %a{:href => "https://plus.google.com/u/1/102310694517210173249/posts", :target => "_blank"}
+                    %i.fa.fa-google-plus
+            .navbar-header
+              %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+                %span.sr-only Toggle navigation
+                %span.icon-bar
+                %span.icon-bar
+                %span.icon-bar
+              %a.navbar-brand{:href => "index.html"}
+              = image_tag 'logo.png', {:alt => "logo"}
+            .collapse.navbar-collapse.navbar-right
+              %ul.nav.navbar-nav
+                %li.active
+                  = link_to 'Inicio', root_path
+                %li
+                  = link_to '¿Quiénes Somos?', page_about_path
+                %li
+                  = link_to 'Tu negocio Holistic Life®', page_business_path
+                %li
+                  = link_to 'Productos', page_products_path
+                %li
+                  =link_to 'Preguntas Frecuentes', page_questions_path
+                %li
+                  = link_to 'Contacto', page_contact_path
+
+    = yield
